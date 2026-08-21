@@ -26,14 +26,22 @@ sh deploy.sh            # build + force-push to the live site (see warning below
 
 - **No tests, no linter, no CI.** `npm test` is a stub that exits 1. There is no `.github/`.
   Verification means: the build completes, and the page looks right in `docs:dev`.
-- **The build is memory-hungry** — 3,500 pages. `deploy.sh` sets
-  `NODE_OPTIONS="--max-old-space-size=16384"`; use the same locally if a build dies with a heap
-  error.
-- **Node version caveat.** The tree pins `webpack@4.44.2` (`yarn.lock:7765`), which hashes with MD4.
-  On Node 17+ that fails with `ERR_OSSL_EVP_UNSUPPORTED`. If you hit it, either use Node 16 or run:
+- **`yarn docs:build` needs two `NODE_OPTIONS` flags on a modern Node.** Both were verified on
+  Node 22; use:
   ```bash
   NODE_OPTIONS="--openssl-legacy-provider --max-old-space-size=16384" yarn docs:build
   ```
+  - `--openssl-legacy-provider`: the tree pins `webpack@4.44.2` (`yarn.lock:7765`), which hashes
+    with MD4. Without the flag the build dies immediately on Node 17+ with
+    `ERR_OSSL_EVP_UNSUPPORTED` / `error:0308010C:digital envelope routines::unsupported`. Using
+    Node 16 instead also works.
+  - `--max-old-space-size`: this is not optional at 3,500 pages. Both webpack passes finish
+    (~8 min, ~130 MB of assets), then the **`Rendering static HTML...` phase** exhausts the heap:
+    it OOMs at both 8192 and 12288 with `FATAL ERROR: Ineffective mark-compacts near heap limit`.
+    `deploy.sh` uses 16384, so a full build wants a machine with **more than 16 GB of RAM** —
+    expect it to fail on a smaller box regardless of flags.
+- **Prefer `yarn docs:dev` for verification.** It compiles on demand, so it sidesteps the render
+  phase entirely and is the practical way to check a content change.
 - ⚠️ **Do not run `deploy.sh` unless explicitly asked.** It force-pushes the built `dist/` to
   `git@github.com:devtut/devtut.github.io.git master` — the upstream project's live site, not this
   fork's.
