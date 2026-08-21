@@ -82,7 +82,9 @@ preferences.addNodeChangeListener(new NodeChangeListener() {
             ├── defaultSavePath=/home/matt/Documents
             └── **exporting**
                 ├── defaultFormat=pdf
-                └── openInBrowserAfterExport=false</pre></code>
+                └── openInBrowserAfterExport=false
+```
+
 To select the `/com/mycompany/myapp` node:
 <ol>
 <li>

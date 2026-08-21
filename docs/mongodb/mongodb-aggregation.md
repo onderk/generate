@@ -1,5 +1,5 @@
 ---
-metaTitle: "MongoDB - Aggregation"
+metaTitle: "MongoDB - Aggregation Examples"
 description: "Aggregate query examples useful for work and learning, Get sample data, Java and Spring example, Left Outer Join with aggregation ( $Lookup)"
 ---
 

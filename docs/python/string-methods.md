@@ -111,7 +111,6 @@ map(str.upper,["These","are","some","'strings'"])
 
 Python supports a `translate` method on the `str` type which allows you to specify the translation table (used for replacements) as well as any characters which should be deleted in the process.
 
-```py
 table</code></td>|It is a lookup table that defines the mapping from one character to another.</tr>|`deletechars`|A list of characters which are to be removed from the string.
 </tbody></table>
 The `maketrans` method (`str.maketrans` in Python 3 and `string.maketrans` in Python 2) allows you to generate a translation table.

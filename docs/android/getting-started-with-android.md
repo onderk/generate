@@ -420,7 +420,8 @@ touch src/dom/domain/SayingHello.java
 
 
 Content:
-<pre class="lang-java prettyprint-override"><code>package dom.domain;
+```java
+package dom.domain;
 import android.widget.TextView;
 
 public final class SayingHello extends android.app.Activity
@@ -448,7 +449,8 @@ touch AndroidManifest.xml
 
 
 Content:
-<pre class="lang-xml prettyprint-override"><code><?xml version='1.0'?>
+```xml
+<?xml version='1.0'?>
 <manifest xmlns:a='http://schemas.android.com/apk/res/android'
  package='dom.domain' a:versionCode='0' a:versionName='0'>
     <application a:label='Saying hello'>
@@ -635,7 +637,8 @@ touch res/values/values.xml
 
 
 Content:
-<pre class="lang-xml prettyprint-override"><code><?xml version='1.0'?>
+```xml
+<?xml version='1.0'?>
 <resources>
     <string name='appLabel'>Saying hello</string>
 </resources>
@@ -647,7 +650,8 @@ Content:
 <li>
 <p>Reference the resource from the XML manifest.
 This is a declarative style of reference:</p>
-<pre class="lang-xml prettyprint-override"><code><!-- <application a:label='Saying hello'> -->
+```xml
+<!-- <application a:label='Saying hello'> -->
      <application a:label='@string/appLabel'>
 
 ```
@@ -657,7 +661,8 @@ This is a declarative style of reference:</p>
 <li>
 <p>Reference the same resource from the Java source.
 This is an imperative reference:</p>
-<pre class="lang-java prettyprint-override"><code>// v.setText( "Hello world" );
+```java
+// v.setText( "Hello world" );
    v.setText( "This app is called "
      + getResources().getString( R.string.appLabel ));
 

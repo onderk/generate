@@ -109,7 +109,8 @@ To install MongoDB, follow the steps below:
 <li>**Installing with [homebrew](https://brew.sh/):**
 <ul>
 <li>Type the following command into the terminal:  
-<pre class="lang-none prettyprint-override"><code>$ brew install mongodb
+```text
+$ brew install mongodb
 
 ```
 
@@ -125,7 +126,8 @@ operating system type is 32-bit or 64-bit. The downloaded file is in format `tgz
 <li>
 Go to the directory where this file is downloaded. Then type the following command:
         
-<pre class="lang-none prettyprint-override"><code>$ tar xvf mongodb-osx-xyz.tgz
+```text
+$ tar xvf mongodb-osx-xyz.tgz
 
 ```
 
@@ -134,7 +136,8 @@ Instead of `xyz`, there would be some version and system type information. The e
 </li>
 <li>
 By default server keeps data in folder `/data/db`. So, we have to create that directory and then run the server having the following commands:
-<pre class="lang-none prettyprint-override"><code>$ sudo bash
+```text
+$ sudo bash
 # mkdir -p /data/db
 # chmod 777 /data
 # chmod 777 /data/db
@@ -146,7 +149,8 @@ By default server keeps data in folder `/data/db`. So, we have to create that di
 </li>
 <li>
 To start the server, the following command should be given from the current location:
-<pre class="lang-none prettyprint-override"><code>$ ./mongod
+```text
+$ ./mongod
 
 ```
 
@@ -155,7 +159,8 @@ It would start the server on port 27017 by default.
 </li>
 <li>
 To start the client, a new terminal should be opened having the same directory as before. Then the following command would start the client and connect to the server.
-<pre class="lang-none prettyprint-override"><code>$ ./mongo
+```text
+$ ./mongo
 
 ```
 
@@ -230,7 +235,8 @@ By default it connects to the `test` database. If you see the line like `connect
 <ul>
 <li>
 Import MongoDB Repository key.
-<pre class="lang-none prettyprint-override"><code>$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+```text
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 gpg: Total number processed: 1\
 gpg:               imported: 1  (RSA: 1)
 
@@ -240,7 +246,8 @@ gpg:               imported: 1  (RSA: 1)
 </li>
 <li>
 Add repository to package list on **Ubuntu 16.04**.
-<pre class="lang-none prettyprint-override"><code>$ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+```text
+$ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
 ```
 
@@ -248,7 +255,8 @@ Add repository to package list on **Ubuntu 16.04**.
 </li>
 <li>
 on **Ubuntu 14.04**.
-<pre class="lang-none prettyprint-override"><code>$ echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+```text
+$ echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
 ```
 
@@ -256,7 +264,8 @@ on **Ubuntu 14.04**.
 </li>
 <li>
 Update package list.
-<pre class="lang-none prettyprint-override"><code>$ sudo apt-get update
+```text
+$ sudo apt-get update
 
 ```
 
@@ -264,7 +273,8 @@ Update package list.
 </li>
 <li>
 Install MongoDB.
-<pre class="lang-none prettyprint-override"><code>$ sudo apt-get install mongodb-org
+```text
+$ sudo apt-get install mongodb-org
 
 ```
 
@@ -277,7 +287,8 @@ $  vi /etc/yum.repos.d/mongodb-org-3.4.repo
 </li>
 <li>
 Paste following text.
-<pre class="lang-none prettyprint-override"><code>[mongodb-org-3.4]
+```text
+[mongodb-org-3.4]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/
 gpgcheck=1
@@ -290,7 +301,8 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 </li>
 <li>
 Update package list.
-<pre class="lang-none prettyprint-override"><code>$ sudo yum update
+```text
+$ sudo yum update
 
 ```
 
@@ -298,7 +310,8 @@ Update package list.
 </li>
 <li>
 Install MongoDB
-<pre class="lang-none prettyprint-override"><code>$ sudo yum install mongodb-org
+```text
+$ sudo yum install mongodb-org
 
 ```
 

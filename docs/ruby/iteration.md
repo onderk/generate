@@ -18,7 +18,6 @@ There are two ways to pass a block to a method:
 
 ### Method 1: Inline
 
-```ruby
 (1..10)</code> is a range from `1` to `10` inclusive. If we wanted it to be `1` to `10` exclusive, we would write `(1...10)`.</li>
 - `.each` is an enumerator that enumerates over `each` element in the object it is acting on. In this case, it acts on `each` number in the range.
 <li>`{ |i| puts i.even? ? 'even' : 'odd' }` is the block for the `each` statement, which itself can be broken down further.

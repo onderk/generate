@@ -1,0 +1,22 @@
+name: test
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # The suite reads the markdown corpus and docs/.vuepress/config.js
+      # directly, so it needs no dependencies installed. A full `vuepress build`
+      # of 3,500+ pages needs a 16 GB heap and is left to deploy.sh.
+      - name: Run validation suite
+        run: npm test

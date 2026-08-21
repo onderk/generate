@@ -129,7 +129,8 @@ public partial class FirstViewController : UIViewController
 
 <li>
 Open "MainNavigationController" class and paste below code:
-<pre class="lang-cs prettyprint-override"><code>public partial class MainNavigationController : UINavigationController
+```cs
+public partial class MainNavigationController : UINavigationController
 {
      public MainNavigationController (IntPtr handle) : base (handle)
      {
