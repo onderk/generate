@@ -409,6 +409,7 @@ We want to use the aforementioned picture of the day as a background. However, w
 ### `contain`
 
 ```css
+
 contain
 
 ```
@@ -422,6 +423,7 @@ This makes sure that the background image is always completely contained in the 
 ### `cover`
 
 ```css
+
 cover
 
 ```

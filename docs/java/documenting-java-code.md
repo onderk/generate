@@ -268,7 +268,7 @@ class TestUtils {
 
 Sometimes you may need to put some complex code inside the javadoc comment. The `@` sign is specially problematic. The use of the old `<code>` tag alongside the `{@literal }` construct solves the problem.
 
-```java
+````java
 /**
  * Usage:
  * 
@@ -292,7 +292,7 @@ Sometimes you may need to put some complex code inside the javadoc comment. The 
  */
 class SingleTestRule implements TestRule { }
 
-```
+````
 
 
 

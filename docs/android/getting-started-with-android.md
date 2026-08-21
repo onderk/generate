@@ -650,23 +650,21 @@ Content:
 <li>
 <p>Reference the resource from the XML manifest.
 This is a declarative style of reference:</p>
-```xml
-<!-- <application a:label='Saying hello'> -->
+<pre class="lang-xml prettyprint-override"><code><!-- <application a:label='Saying hello'> -->
      <application a:label='@string/appLabel'>
 
-```
+</code></pre>
 
 
 </li>
 <li>
 <p>Reference the same resource from the Java source.
 This is an imperative reference:</p>
-```java
-// v.setText( "Hello world" );
+<pre class="lang-java prettyprint-override"><code>// v.setText( "Hello world" );
    v.setText( "This app is called "
      + getResources().getString( R.string.appLabel ));
 
-```
+</code></pre>
 
 
 </li>

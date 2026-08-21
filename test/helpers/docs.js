@@ -129,7 +129,11 @@ function scanFences(source) {
   // file balanced but rendering everything in between as code.
   const strayOpeners = [];
 
-  lines.forEach((text, i) => {
+  lines.forEach((raw, i) => {
+    // Much of the corpus has mixed line endings. In JavaScript "." does not
+    // match \r (it is a line terminator), so a fence on a CRLF line would never
+    // match and the whole block would go unseen.
+    const text = raw.replace(/\r$/, "");
     const m = /^(\s*)(`{3,})(.*)$/.exec(text);
     if (m) {
       const length = m[2].length;
