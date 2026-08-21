@@ -17,10 +17,27 @@ const baseline = docs.loadBaseline();
 // like ```r` that would otherwise ship as an unhighlighted block.
 const KNOWN_LANGUAGES = new Set([
   "bash", "c", "cpp", "cs", "css", "dotnet", "git", "haskell", "hs", "html",
-  "java", "js", "json", "kotlin", "latex", "matlab", "objectivec", "perl",
-  "php", "powershell", "py", "python", "r", "ruby", "sql", "swift", "text",
-  "ts", "typescript", "vb", "xml", "yaml",
+  "java", "js", "json", "kotlin", "latex", "markdown", "matlab", "objectivec", "perl",
+  "php", "powershell", "py", "python", "r", "ruby", "sql", "swift", "ts",
+  "typescript", "vb", "xml", "yaml",
 ]);
+
+// Prism loads highlighters from prismjs/components on demand, and a tag with no
+// component (or alias) logs "Language does not exist" during every build. An
+// untagged fence is the correct way to say "no language" -- see test/baseline.json.
+test("every fence language has a Prism component", () => {
+  const missing = [];
+  for (const lang of KNOWN_LANGUAGES) {
+    const components = require("prismjs/components.js");
+    const known = Object.keys(components.languages).some(
+      (id) =>
+        id === lang ||
+        [].concat(components.languages[id].alias || []).includes(lang)
+    );
+    if (!known) missing.push(lang);
+  }
+  assert.deepEqual(missing, [], `fence tags Prism cannot highlight: ${missing.join(", ")}`);
+});
 
 test("no code fence is left open at end of file", () => {
   const unclosed = [];

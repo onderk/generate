@@ -31,7 +31,7 @@ After each `<footer>` (`footer::after`):
 
 (the other properties can be ignored but might have to be modified if the presentation uses a different style template).
 
-````text
+````markdown
 ---
 title: "Adding a footer to presentaion slides"
 author: "Martin Schmelzer"
@@ -92,7 +92,7 @@ This is a script saved as .Rmd, on the contrary of r scripts saved as .R.
 
 To knit the script, either use the `render` function or use the shortcut button in Rstudio.
 
-````text
+````markdown
 --- 
 title: "Rstudio exemple of a rmd file"
 author: 'stack user'

@@ -254,7 +254,7 @@ This will display the Bash help (manual) page for the specified built-in.
 For example, `help unset` will show:
 
 > 
-```text
+```
 unset: unset [-f] [-v] [-n] [name ...]
    Unset values and attributes of shell variables and functions.
 

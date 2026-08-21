@@ -163,7 +163,7 @@ The text in your vignette is formatted as [Markdown](https://daringfireball.net/
 
 The only addition to the original Markdown, is a tag that takes R code, runs it, captures the output, and translates it into formatted Markdown:
 
-````text
+````markdown
 ```{r}
 # Add two numbers together
 add <- function(a, b) a + b
