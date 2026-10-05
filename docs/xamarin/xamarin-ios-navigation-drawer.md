@@ -142,7 +142,7 @@ Open "MainNavigationController" class and paste below code:
      }
  }
 
-```
+</code></pre>
 
 
 </li>

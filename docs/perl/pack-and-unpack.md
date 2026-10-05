@@ -47,7 +47,8 @@ And it takes 8 bytes. So 64bit signed int. And I'm on a 64Bit Processor. =)
 Perldoc `pack` says
 
 > 
-<pre class="lang-none prettyprint-override"><code>            q  A signed quad (64-bit) value.
+```bash
+            q  A signed quad (64-bit) value.
 
 ```
 

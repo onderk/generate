@@ -97,7 +97,6 @@ To access functions and properties of nullable types, you have to use special op
 
 The first one, `?.`, gives you the property or function you're trying to access, or it gives you null if the object is null:
 
-```kotlin
 apply</code></a> like this:</p>
 
 ```kotlin

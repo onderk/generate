@@ -139,7 +139,8 @@ or configured (for an existing submodule) to follow a branch:
 Run:
 
 ```git
-$ git mv **old/path/to/module** **new/path/to/module**</pre></code>
+$ git mv **old/path/to/module** **new/path/to/module**
+```
 
 1.8
 <ol>

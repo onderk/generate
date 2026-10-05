@@ -409,7 +409,8 @@ We want to use the aforementioned picture of the day as a background. However, w
 ### `contain`
 
 ```css
-<pre class="lang-css prettyprint-override"><code>contain
+
+contain
 
 ```
 
@@ -422,7 +423,8 @@ This makes sure that the background image is always completely contained in the 
 ### `cover`
 
 ```css
-<pre class="lang-css prettyprint-override"><code>cover
+
+cover
 
 ```
 

@@ -235,7 +235,6 @@ Interactive mode enabled
 php > echo "Hello world!";
 Hello world!</pre></li>
 
-```php
 Example.php</code></strong>
 
 ```php

@@ -271,7 +271,6 @@ MongoDB.connect('mongodb://localhost:27017/databaseName')
     .then(function(result) {
         console.log(result);
     });
-    ```js
 
 ```
 

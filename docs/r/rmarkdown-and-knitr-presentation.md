@@ -31,7 +31,7 @@ After each `<footer>` (`footer::after`):
 
 (the other properties can be ignored but might have to be modified if the presentation uses a different style template).
 
-```r
+````markdown
 ---
 title: "Adding a footer to presentaion slides"
 author: "Martin Schmelzer"
@@ -39,9 +39,9 @@ date: "26 Juli 2016"
 output: ioslides_presentation
 ---
 
-```r{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-```r
+```
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
@@ -77,7 +77,7 @@ This is slide 2
 
 And slide 3.
 
-```
+````
 
 The result will look like this:
 
@@ -92,7 +92,7 @@ This is a script saved as .Rmd, on the contrary of r scripts saved as .R.
 
 To knit the script, either use the `render` function or use the shortcut button in Rstudio.
 
-```r
+````markdown
 --- 
 title: "Rstudio exemple of a rmd file"
 author: 'stack user'
@@ -110,9 +110,9 @@ To insert R code, it needs to be encapsulated into inverted quote.
 
 Like that for a long piece of code:
 
-```r{r cars}
+```{r cars}
 summary(cars)
-```r
+```
 
 And like ``r cat("that")`` for small piece of code.
 
@@ -120,11 +120,11 @@ And like ``r cat("that")`` for small piece of code.
 
 You can also embed plots, for example:
 
-```r{r echo=FALSE}
+```{r echo=FALSE}
 plot(pressure)
-```r
-
 ```
+
+````
 
 
 

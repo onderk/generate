@@ -111,7 +111,7 @@ To install MongoDB, follow the steps below:
 <li>Type the following command into the terminal:  
 <pre class="lang-none prettyprint-override"><code>$ brew install mongodb
 
-```
+</code></pre>
 
 
 </li>
@@ -125,7 +125,8 @@ operating system type is 32-bit or 64-bit. The downloaded file is in format `tgz
 <li>
 Go to the directory where this file is downloaded. Then type the following command:
         
-<pre class="lang-none prettyprint-override"><code>$ tar xvf mongodb-osx-xyz.tgz
+```bash
+$ tar xvf mongodb-osx-xyz.tgz
 
 ```
 
@@ -140,7 +141,7 @@ By default server keeps data in folder `/data/db`. So, we have to create that di
 # chmod 777 /data/db
 # exit
 
-```
+</code></pre>
 
 
 </li>
@@ -148,7 +149,7 @@ By default server keeps data in folder `/data/db`. So, we have to create that di
 To start the server, the following command should be given from the current location:
 <pre class="lang-none prettyprint-override"><code>$ ./mongod
 
-```
+</code></pre>
 
 
 It would start the server on port 27017 by default.
@@ -157,7 +158,7 @@ It would start the server on port 27017 by default.
 To start the client, a new terminal should be opened having the same directory as before. Then the following command would start the client and connect to the server.
 <pre class="lang-none prettyprint-override"><code>$ ./mongo
 
-```
+</code></pre>
 
 
 By default it connects to the `test` database. If you see the line like `connecting to: test`. Then you have successfully installed MongoDB. Congrats! Now, you can test [Hello World](http://stackoverflow.com/documentation/mongodb/691/introduction-to-mongodb/2291/hello-world#t=20160616174713619659) to be more confident.
@@ -234,7 +235,7 @@ Import MongoDB Repository key.
 gpg: Total number processed: 1\
 gpg:               imported: 1  (RSA: 1)
 
-```
+</code></pre>
 
 
 </li>
@@ -242,7 +243,7 @@ gpg:               imported: 1  (RSA: 1)
 Add repository to package list on **Ubuntu 16.04**.
 <pre class="lang-none prettyprint-override"><code>$ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
-```
+</code></pre>
 
 
 </li>
@@ -250,7 +251,7 @@ Add repository to package list on **Ubuntu 16.04**.
 on **Ubuntu 14.04**.
 <pre class="lang-none prettyprint-override"><code>$ echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
-```
+</code></pre>
 
 
 </li>
@@ -258,7 +259,7 @@ on **Ubuntu 14.04**.
 Update package list.
 <pre class="lang-none prettyprint-override"><code>$ sudo apt-get update
 
-```
+</code></pre>
 
 
 </li>
@@ -266,7 +267,7 @@ Update package list.
 Install MongoDB.
 <pre class="lang-none prettyprint-override"><code>$ sudo apt-get install mongodb-org
 
-```
+</code></pre>
 
 
 </li>
@@ -284,7 +285,7 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 
-```
+</code></pre>
 
 
 </li>
@@ -292,7 +293,7 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 Update package list.
 <pre class="lang-none prettyprint-override"><code>$ sudo yum update
 
-```
+</code></pre>
 
 
 </li>
@@ -300,7 +301,7 @@ Update package list.
 Install MongoDB
 <pre class="lang-none prettyprint-override"><code>$ sudo yum install mongodb-org
 
-```
+</code></pre>
 
 
 </li>

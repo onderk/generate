@@ -106,7 +106,6 @@ Result:
 ```sql
 Number of Records: 14
 
-```sql
 |City|Country
 |Aachen|Germany
 |Berlin|Germany
@@ -123,6 +122,7 @@ Number of Records: 14
 |Münster|Germany
 |Stuttgart|Germany
 
+```
 
 
 #### Syntax

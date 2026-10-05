@@ -517,12 +517,6 @@ $"interpolated {typeof(string).Name} string.".Current();
 ```cs
 using static System.FormattableString;
 
-```cs
-using static System.FormattableString;</p>
-<p>string invariant = Invariant($"Now = **{DateTime.Now}**");
-string current = $"Now = **{DateTime.Now}**";
-```
-
 string invariant = Invariant($"Now = **{DateTime.Now}**");
 string current = $"Now = **{DateTime.Now}**";
 ```

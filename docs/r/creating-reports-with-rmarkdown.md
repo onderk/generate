@@ -46,7 +46,7 @@ Here I use the packages:
 
 **For HTML documents**
 
-```r
+````markdown
 ---
 title: "Printing Tables"
 author: "Martin Schmelzer"
@@ -54,36 +54,36 @@ date: "29 Juli 2016"
 output: html_document
 ---
 
-```r{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 library(xtable)
 library(pander)
 df <- mtcars[1:4,1:4]
-```r
+```
 
 # Print tables using `kable`
-```r{r, 'kable'}
+```{r, 'kable'}
 kable(df)
-```r
+```
 
 # Print tables using `xtable`
-```r{r, 'xtable', results='asis'}
+```{r, 'xtable', results='asis'}
 print(xtable(df), type="html")
-```r
+```
 
 # Print tables using `pander`
-```r{r, 'pander'}
+```{r, 'pander'}
 pander(df)
-```r
-
 ```
+
+````
 
 [<img src="http://i.stack.imgur.com/FzRA5m.png" alt="enter image description here" />](http://i.stack.imgur.com/FzRA5m.png)
 
 **For PDF documents**
 
-```r
+````markdown
 ---
 title: "Printing Tables"
 author: "Martin Schmelzer"
@@ -91,30 +91,30 @@ date: "29 Juli 2016"
 output: pdf_document
 ---
 
-```r{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 library(xtable)
 library(pander)
 df <- mtcars[1:4,1:4]
-```r
+```
 
 # Print tables using `kable`
-```r{r, 'kable'}
+```{r, 'kable'}
 kable(df)
-```r
+```
 
 # Print tables using `xtable`
-```r{r, 'xtable', results='asis'}
+```{r, 'xtable', results='asis'}
 print(xtable(df, caption="My Table"))
-```r
+```
 
 # Print tables using `pander`
-```r{r, 'pander'}
+```{r, 'pander'}
 pander(df)
-```r
-
 ```
+
+````
 
 [<img src="http://i.stack.imgur.com/Fo8vzm.png" alt="enter image description here" />](http://i.stack.imgur.com/Fo8vzm.png)
 
@@ -131,7 +131,7 @@ There are two possible ways of including LaTeX preamble commands (e.g. `\usepack
 
 **1. Using the YAML option `header-includes`:**
 
-```r
+````markdown
 ---
 title: "Including LaTeX Preample Commands in RMarkdown"
 header-includes: 
@@ -141,21 +141,21 @@ header-includes:
 output: pdf_document
 ---
 
-```r{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, external=T)
-```r
+```
 
 # Section 1
 
 As you can see, this text uses the Computer Moden Font!
 
-```
+````
 
 [<img src="http://i.stack.imgur.com/U4eqOm.png" alt="enter image description here" />](http://i.stack.imgur.com/U4eqOm.png)
 
 **2. Including External Commands with `includes`, `in_header`**
 
-```r
+````markdown
 ---
 title: "Including LaTeX Preample Commands in RMarkdown"
 output: 
@@ -164,15 +164,15 @@ output:
       in_header: includes.tex
 ---
 
-```r{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, external=T)
-```r
+```
 
 # Section 1
 
 As you can see, this text uses the Computer Modern Font!
 
-```
+````
 
 Here, the content of includes.tex are the same three commands we included with `header-includes`.
 
@@ -211,14 +211,14 @@ They are evaluated and inserted their output answer in place.
 
 **Block** chunks have a different syntax:
 
-```r
-```r{r name, echo=TRUE, include=TRUE, ...}
+````markdown
+```{r name, echo=TRUE, include=TRUE, ...}
 
 2*2
 
-```r`
-
 ```
+
+````
 
 And they come with several possible options. Here are the main ones (but there are many others):
 
@@ -234,39 +234,39 @@ They are written in a simple `tag=value` format like in the example above.
 
 Below is a basic example of R-markdown file illustrating the way R code chunks are embedded inside r-markdown.
 
-```r
+````markdown
 # Title #
 
 This is **plain markdown** text.
 
-```r{r code, include=FALSE, echo=FALSE}
+```{r code, include=FALSE, echo=FALSE}
 
 # Just declare variables
 
 income <- 1000
 taxes  <- 125
 
-```r
+```
 
 My income is: `r income ` dollars and I payed `r taxes ` dollars in taxes.
 
 Below is the sum of money I will have left:
 
-```r{r gain, include=TRUE, echo=FALSE}
+```{r gain, include=TRUE, echo=FALSE}
 
 gain <- income-taxes
 
 gain
 
-```r
+```
 
-```r{r plotOutput, include=TRUE, echo=FALSE, fig.width=6, fig.height=6}
+```{r plotOutput, include=TRUE, echo=FALSE, fig.width=6, fig.height=6}
 
 pie(c(income,taxes), label=c("income", "taxes"))
 
-```r
-
 ```
+
+````
 
 ### Converting R-markdown to other formats
 

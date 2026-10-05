@@ -94,7 +94,7 @@ It is nevertheless recommended to always use `{}`, because it's more readable.
 While it is not recommended to do so, it is  possible to chain this behavior:
 
 ```php
-``````$$DoNotTryThisAtHomeKids = $value;
+$$DoNotTryThisAtHomeKids = $value;
 
 ```
 

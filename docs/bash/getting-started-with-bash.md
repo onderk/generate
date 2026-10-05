@@ -254,7 +254,8 @@ This will display the Bash help (manual) page for the specified built-in.
 For example, `help unset` will show:
 
 > 
-<pre class="lang-none prettyprint-override"><code>unset: unset [-f] [-v] [-n] [name ...]
+```bash
+unset: unset [-f] [-v] [-n] [name ...]
    Unset values and attributes of shell variables and functions.
 
    For each NAME, remove the corresponding variable or function.

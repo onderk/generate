@@ -206,7 +206,6 @@ For example:
 >>> d['foobar'] = 8
 >>> print(a)
 {'baz': 7, 'foo': 5, 'bar': 6, 'foobar': 8}
-```py
 
 ```
 
